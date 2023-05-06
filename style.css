@@ -1,0 +1,99 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.notifier {
+    margin: 50px auto;
+    width: 400px;
+    background: linear-gradient(-45deg, #79ff82, #d1ff3b, #eb7aff, #00fabf);
+    border: 1px solid #ddd;
+    animation: gradient 15s ease infinite;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.notifier h1 {
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-variant: small-caps;
+    font-style: oblique;
+    font-size: 30px;
+}
+
+.input-group {
+    margin: 20px 0px;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 100px;
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.input-group1 label {
+    display: inline-block;
+    width: 100px;
+    font-size: 18px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 20px;
+}
+
+.input-group1 input[type="text"] {
+    width: 200px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #0afd57;
+}
+
+.input-group1 input[type="time"] {
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid #0afd57;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.btn-save {
+    background-color: #fff200;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #def816;
+}

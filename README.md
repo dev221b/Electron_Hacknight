@@ -1,8 +1,8 @@
 # Electron_Hacknight
 # How to install
-Run the following commands in the terminal
-npm init
-npm install --save-dev electron
+Run the following commands in the terminal <br>
+npm init <br>
+npm install --save-dev electron <br> <br>
 
-To run the app:
+To run the app: <br>
 npm start

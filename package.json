@@ -1,0 +1,22 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev221b/Electron_Hacknight.git"
+  },
+  "author": "Dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev221b/Electron_Hacknight/issues"
+  },
+  "homepage": "https://github.com/dev221b/Electron_Hacknight#readme",
+  "devDependencies": {
+    "electron": "^24.2.0"
+  }
+}

@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-    <br> <br>
-    <button id="clickme" onclick="myFunc()">Click Me</button>
-    <script src="./renderer.js"></script>
-  </body>
+
+<head>
+    <title>NotiKuttan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="notifier">
+        <h1>Set Reminder</h1>
+        <div class="input-group1">
+            <label for="time">TITLE:</label>
+            <input type="text" id="text" name="text">
+        </div>
+        <div class="input-group">
+            <label for="time">TIME:</label>
+            <input type="time" id="time" name="time">
+        </div>
+        <div class="button-group">
+            <button class="btn-save">Save</button>
+        </div>
+    </div>
+    <div class="notifier">
+        <h1>UPCOMING</h1>
+        <div class="input-group1">
+            <label for="time">TITLE:</label>
+            <input type="text" id="text" name="text">
+        </div>
+
+        <div class="input-group1">
+            <label for="time">TIME:</label>
+            <input type="text" id="text" name="text">
+        </div>
+
+
+    </div>
+</body>
+
 </html>

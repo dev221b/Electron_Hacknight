@@ -83,9 +83,11 @@ const currentTime = document.querySelector("h1"),
 selectMenu = document.querySelectorAll("select"),
 setAlarmBtn = document.querySelector("button");
 
+
+
 // let title = document.getElementById('title').value;
 
-let alarmTime, isAlarmSet;
+let alarmTime, alarmTimes=[], isAlarmSet=0;
 // ringtone = new Audio("./files/ringtone.mp3");
 
 for (let i = 12; i > 0; i--) {
@@ -123,12 +125,16 @@ setInterval(() => {
     currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
     
     if (alarmTime === `${h}:${m} ${ampm}` && ctr == 0) {
+        console.log("Inside checker")
+        console.log(alarmTime)
+        
         ctr = ctr+1;
-        const noti = new Notification("NotiKuttan",{
+        const noti = new Notification("Notify",{
             body: document.getElementById('title').value},{
             timeoutType: "never"
         })
-        noti.show();
+        // noti.show();
+        alarmTime=alarmTimes.slice[1]
     }
 }, 1000);
 
@@ -173,23 +179,63 @@ function setAlarm() {
 
 
 
-        if (isAlarmSet) {
-            alarmTime = "";
-            document.getElementById('title').value = ""
-            selectMenu[0].value = ""
-            selectMenu[1].value = ""
-            selectMenu[2].value = ""
-            setAlarmBtn.innerText = "Set Reminder";
-            return isAlarmSet = false;
-        }
+        // if (isAlarmSet>0) {
+        //     alarmTime = "";
+        //     document.getElementById('title').value = ""
+        //     selectMenu[0].value = ""
+        //     selectMenu[1].value = ""
+        //     selectMenu[2].value = ""
+        //     // setAlarmBtn.innerText = "Set Reminder";
+        //     return isAlarmSet = false;
+        // }
         let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
         if (time.includes("Hour") || time.includes("Minute") || time.includes("AM/PM")) {
             return alert("Please select a valid time to set reminder");
         }
-        alarmTime = time;
-        isAlarmSet = true;
+        
+        console.log(time)
+
+        const remBox = document.querySelector("#upcoming")
+
+        const upcRems = document.createElement("div")
+        upcRems.className = "input-group2"
+        remBox.appendChild(upcRems)
+
+        const upcTitle = document.createElement("h3")
+        upcTitle.innerText = document.getElementById('title').value
+        upcTitle.classList="upcTitle"
+        upcRems.appendChild(upcTitle)
+
+        const upcTime = document.createElement("h3")
+        upcTime.innerText = time
+        upcTime.classList="upcTime"
+        upcRems.appendChild(upcTime)
+
+        const dltBtn = document.createElement("button")
+        dltBtn.innerText = "Delete"
+        dltBtn.id="dltBtn"
+        upcRems.appendChild(dltBtn)
+
+        const div = document.getElementsByClassName("input-group2")
+        const titleUpc = document.getElementById("upcTitle");
+        const timeUpc = document.getElementById("upcTime");
+        const dlt = document.querySelector("#dltBtn");
+        dlt.addEventListener("click", () => {
+            console.log("Remove")
+            remBox.remove(div)
+        
+        })
+
+        // alarmTime=time
+        alarmTimes.push(time);
+        if(isAlarmSet>0){
+            alarmTimes = alarmTimes.sort();
+        }
+        alarmTime = alarmTimes[0]
+        console.log(alarmTime)
+        isAlarmSet = isAlarmSet+1;
         // content.classList.add("disable");
-        setAlarmBtn.innerText = "Clear Reminder";
+        // setAlarmBtn.innerText = "Clear Reminder";
 }
 
 setAlarmBtn.addEventListener("click", setAlarm);

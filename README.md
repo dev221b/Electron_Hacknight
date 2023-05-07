@@ -3,6 +3,8 @@ This is a reminder app built using electron. It allows you to set a reminder for
 ## Team members
 1. Abhishek A S [<a href="(https://github.com/ABHISHEK-A-S)">ABHISHEK-A-S</a>]
 2. Devika B [<a href="(https://github.com/dev221b)">dev221b</a>]
+## Link to product walkthrough
+<a href="https://www.loom.com/share/88b62657b315464189c059ead105c39f">Notify demo link</a>
 ## How it Works ?
 Set the title and time for your reminder <br>
 You will get a desktop notification at the set time

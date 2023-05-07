@@ -1,3 +1,4 @@
+![Electron Notion](https://user-images.githubusercontent.com/64391274/235363274-375ce61c-721f-4543-a150-1b99525d54ac.png)
 # Project Name : Notify
 This is a reminder app built using electron. It allows you to set a reminder for a particular task at a particular time and a desktop notification appears at the set time reminding you of the task
 ## Team members
@@ -9,7 +10,7 @@ This is a reminder app built using electron. It allows you to set a reminder for
 Set the title and time for your reminder <br>
 You will get a desktop notification at the set time
 ## Libraries used
-ElectroN <br>
+Electron <br>
 HTML <br>
 CSS <br>
 JavaScript
